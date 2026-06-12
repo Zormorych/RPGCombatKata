@@ -1,0 +1,26 @@
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+class IterationOneTest {
+
+    @Test
+    void shouldCreateCharacterWith1000Health() {
+        RpgCharacter character = new RpgCharacter(1000, 1, true);
+        assertEquals(1000, character.getHealth());
+    }
+
+    @Test
+    void shouldCreateCharacterWithLevel1() {
+        RpgCharacter character = new RpgCharacter(1000, 1, true);
+        assertEquals(1, character.getLevel());
+    }
+
+    @Test
+    void shouldCreateCharacterAlive() {
+        RpgCharacter character = new RpgCharacter(1000, 1, true);
+        assertTrue(character.isAlive());
+    }
+}

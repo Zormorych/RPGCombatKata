@@ -1,0 +1,38 @@
+public class RpgCharacter {
+    private static final int initHealth = 1000;
+    private static final int initLevel = 1;
+    private static final boolean isAlive = true;
+    private static final boolean isDead = false;
+
+   private int health;
+   private int level;
+   private boolean isAlive;
+
+    public createRpgCharacter(int health, int level, boolean isAlive) {
+        this.health = initHealth;
+        this.level = initLevel;
+        this.isAlive = isAlive;
+    }
+
+    RpgCharacter character = new RpgCharacter(initHealth, initLevel, isAlive);
+
+    public void dealDamage (RpgCharacter target, int damage){
+        if (target.isAlive){
+            target.health -= damage;
+            if (target.health <= 0){
+                target.isAlive = isDead;
+            }
+        }
+    }
+    
+
+    
+
+
+
+
+
+
+
+
+}
